@@ -1,8 +1,8 @@
 ---
-name: 기능 요청
+name: feature
 about: 기능 추가시 사용하는 템플릿
 title: "[Feat]"
-labels: enhancement
+labels: bug, enhancement
 assignees: hangeunhyeong
 type: Feature
 
