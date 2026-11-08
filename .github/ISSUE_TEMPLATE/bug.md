@@ -2,7 +2,7 @@
 name: bug
 about: 버그를 개선할때 사용하는 템플릿
 title: "[Fix]"
-labels: bug
+labels: bug, enhancement
 assignees: hangeunhyeong
 type: Bug
 
