@@ -1,4 +1,4 @@
-package com.moaft.moaft_be;
+package com.moaft;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
