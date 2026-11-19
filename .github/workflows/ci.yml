@@ -1,0 +1,33 @@
+# .github/workflows/ci.yml
+name: Backend CI
+
+# 1) 언제 실행할지
+on:
+  pull_request:
+    branches: [ main, develop ]
+  push:
+    branches: [ main, develop ]
+
+# 2) 무엇을 실행할지
+jobs:
+  build:
+    runs-on: ubuntu-latest        # GitHub가 제공하는 러너(가상머신)
+
+    steps:
+      - name: 코드 체크아웃
+        uses: actions/checkout@v4
+
+      - name: JDK 21 설치
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Gradle 캐시 설정
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: gradlew 실행 권한 부여
+        run: chmod +x ./gradlew
+
+      - name: 빌드 및 테스트
+        run: ./gradlew build      # 테스트 포함. 하나라도 실패하면 CI 실패
