@@ -1,3 +1,4 @@
+
 package com.moaft.domain.ai.dto;
 
 import java.util.List;
@@ -49,13 +50,13 @@ public class AiAnalysisDto {
     public record ProductionResult(
             String title,
             String description,
-            List<ProductionCandidate> candidates
+            List<ProductionStep> steps
     ) {
     }
 
-    public record ProductionCandidate(
+    public record ProductionStep(
             String name,
-            String description,
+            List<String> descriptionCandidates,
             List<String> tools,
             List<String> prompts,
             List<String> references,
@@ -66,13 +67,13 @@ public class AiAnalysisDto {
     public record VariationResult(
             String title,
             String description,
-            List<VariationCandidate> candidates
+            List<VariationStep> variations
     ) {
     }
 
-    public record VariationCandidate(
+    public record VariationStep(
             String name,
-            String description,
+            List<String> descriptionCandidates,
             List<String> tools,
             String prompt,
             String result,
