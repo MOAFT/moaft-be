@@ -13,12 +13,6 @@ jobs:
   build:
     runs-on: ubuntu-latest        # GitHub가 제공하는 러너(가상머신)
 
-    env:
-      SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3306/moaft?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-      SPRING_DATASOURCE_USERNAME: moaft
-      SPRING_DATASOURCE_PASSWORD: moaft
-      SPRING_JPA_HIBERNATE_DDL_AUTO: create-drop
-
     services:
       mysql:
         image: mysql:8.0

@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Tag("external")
 @SpringBootTest
-@ActiveProfiles("local")
+@ActiveProfiles("test")
 class GeminiConnectionTest {
 
     @Autowired
