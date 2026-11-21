@@ -15,7 +15,7 @@ jobs:
 
     services:
       mysql:
-        image:
+        image: mysql:8.0
         env:
           MYSQL_ROOT_PASSWORD: root   # root 계정 비밀번호를 root로 설정
           MYSQL_DATABASE: moaft       # moaft라는 DB를 생성
