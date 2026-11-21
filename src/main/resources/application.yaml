@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: moaft-be
+
+  jackson:
+    property-naming-strategy: SNAKE_CASE
