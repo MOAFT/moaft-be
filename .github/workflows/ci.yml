@@ -13,6 +13,22 @@ jobs:
   build:
     runs-on: ubuntu-latest        # GitHub가 제공하는 러너(가상머신)
 
+    services:
+      mysql:
+        image:
+        env:
+          MYSQL_ROOT_PASSWORD: root   # root 계정 비밀번호를 root로 설정
+          MYSQL_DATABASE: moaft       # moaft라는 DB를 생성
+          MYSQL_USER: moaft           # moaft라는 계정을 생성
+          MYSQL_PASSWORD: moaft       # 그 계정 비밀번호는 moaft
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
     steps:
       - name: 코드 체크아웃
         uses: actions/checkout@v4
