@@ -6,4 +6,5 @@ public class ReviewSmokeTest {
     public static boolean canRegister(int age) {
         return age > 18;
     }
+
 }
