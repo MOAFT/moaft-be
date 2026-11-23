@@ -26,6 +26,9 @@ public class Prompt {
     @Column(columnDefinition = "TEXT")
     private String content;
 
+    @Column(columnDefinition = "TEXT")
+    private String description;
+
     @Column(nullable = false)
     private Integer promptOrder = 0;
 }

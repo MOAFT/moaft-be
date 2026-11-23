@@ -46,4 +46,7 @@ public class AiAnalysisJob {
     private LocalDateTime requestedAt;
 
     private LocalDateTime completedAt;          // 완료됐을 때만, 코드에서 직접 넣음
+
+    @Column(nullable = true, columnDefinition = "JSON")
+    private String resultData;                  // AI 분석 후보 전체 (완료 전·실패 시 null)
 }

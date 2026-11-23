@@ -18,8 +18,4 @@ public class UserInterest {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @MapsId("interestFieldId")
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "interest_field_id")
-    private InterestField interestField;
 }

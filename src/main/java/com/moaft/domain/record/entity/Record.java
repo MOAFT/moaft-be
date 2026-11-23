@@ -51,6 +51,9 @@ public class Record extends BaseEntity {
     @Column(nullable = false, length = 20, columnDefinition = "VARCHAR(20)")
     private RecordStatus status = RecordStatus.DRAFT;
 
+    @Column(nullable = false, length = 36, unique = true, columnDefinition = "CHAR(36)")
+    private String shareKey;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "copied_from_record_id")
     private Record copiedFrom;
