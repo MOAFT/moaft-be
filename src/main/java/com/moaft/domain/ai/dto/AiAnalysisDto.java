@@ -56,11 +56,20 @@ public class AiAnalysisDto {
 
     public record ProductionStep(
             String name,
-            List<String> descriptionCandidates,
             List<String> tools,
-            List<String> prompts,
-            List<String> references,
+            List<Candidate> candidates,
             List<String> intermediateResults
+    ) {
+    }
+
+    public record Candidate(
+            List<ProductionDescription> productionDescriptions
+    ) {
+    }
+
+    public record ProductionDescription(
+            String description,
+            String prompts
     ) {
     }
 
